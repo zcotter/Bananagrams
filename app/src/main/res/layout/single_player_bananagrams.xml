@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/timer_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".08"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_gravity="fill"
+            android:text="@string/initial_score"/>
+
+        <TextView
+            android:id="@+id/time_left"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight=".5"/>
+    </LinearLayout>
+
+    <edu.neu.madcourse.zachcotter.bananagrams.Board
+        android:id="@+id/board"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.77"/>
+
+    <edu.neu.madcourse.zachcotter.bananagrams.LetterList
+        android:id="@+id/letters_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15">
+
+        <Button
+            android:id="@+id/peel_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/peel_button_label"
+            android:visibility="gone"/>
+    </edu.neu.madcourse.zachcotter.bananagrams.LetterList>
+</LinearLayout>

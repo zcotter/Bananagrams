@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1.0">
+    <TextView
+        android:id="@+id/a_score"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="fill"
+        android:text="@string/initial_score"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".08"/>
+
+    <edu.neu.madcourse.zachcotter.bananagrams.Board
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:id="@+id/a_board"
+        android:layout_weight="0.77"/>
+    <edu.neu.madcourse.zachcotter.bananagrams.LetterList
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:id="@+id/a_letters_view"
+        android:layout_weight="0.15">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/a_peel_button"
+            android:visibility="gone"
+            android:text="@string/peel_button_label"/>
+    </edu.neu.madcourse.zachcotter.bananagrams.LetterList>
+
+</LinearLayout>

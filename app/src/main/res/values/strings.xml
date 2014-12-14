@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Bananagrams</string>
+    <string name="dictionary_label">Dictionary</string>
+    <string name="dictionary_title">Test Dictionary</string>
+    <string name="dictionary_search_hint">Look up a word</string>
+    <string name="clear_label">Clear</string>
+    <string name="dictionary_acknowledgements_label">Acknowledgements</string>
+    <string name="return_to_menu_label">Return To Menu</string>
+    <string name="search_results_header">Words Detected:</string>
+    <string name="word_game_label">Word Game</string>
+    <string name="tile_frequencies">a:9 b:2 c:2 d:4 e:12 f:2 g:3 h:2
+        i:9 j:1 k:1 l:4 m:2 n:6 o:8 p:2 q:1 r:6 s:4 t:6 u:4 v:2 w:2
+        x:1 y:2 z:1</string>
+    <string name="tile_scores">a:1 b:3 c:3 d:2 e:1 f:4 g:2 h:4
+        i:1 j:8 k:5 l:1 m:3 n:1 o:1 p:3 q:10 r:1 s:1 t:1 u:1 v:4 w:4
+        x:8 y:4 z:10</string>
+    <string name="action_pause">Pause</string>
+    <string name="initial_score">Score: 0</string>
+    <string name="resume_bananagrams">Resume Game</string>
+    <string name="quit_game_label">Quit Game</string>
+    <string name="bananagrams_settings_label">Settings</string>
+    <string name="peel_button_label">Peel!!</string>
+    <string name="ok_label">Ok</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="high_score_name_title">Enter your name to submit a high score</string>
+    <string name="post_random_score_text">Post Random Score</string>
+    <string name="view_high_scores_text">View High Scores</string>
+    <string name="communication_label">Communication</string>
+    <string name="high_score_title">Score Table</string>
+    <string name="view_players_label">View Players</string>
+    <string name="choose_player_title">Choose another player</string>
+    <string name="not_yo_turn_text">It is your partner\'s turn.</string>
+    <string name="multiplayer_text">New Two Player Game</string>
+    <string name="two_player_text">Two Player Word Game</string>
+    <string name="two_player_label">Two Player Word Game</string>
+</resources>

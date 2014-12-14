@@ -1,0 +1,76 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.zachcotter.bananagrams">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/b"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name=".BananagramsMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Dictionary"
+            android:label="@string/dictionary_title"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SinglePlayerBananagrams"
+            android:label="@string/word_game_label"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".BananagramsPauseMenu"
+            android:label="@string/word_game_label"/>
+        <activity
+            android:name=".Settings"
+            android:label="@string/bananagrams_settings_label"/>
+        <activity android:name=".Communication"/>
+        <activity
+            android:name=".HighScoreTable"
+            android:label="@string/high_score_title"/>
+        <activity
+            android:name=".ChoosePlayer"
+            android:label="@string/choose_player_title"/>
+        <activity android:name=".POCMoveList"/>
+        <activity
+            android:name=".MultiPlayerBananagrams"
+            android:label="@string/two_player_label"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        <service android:name=".GCMIntentService"/>
+
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+
+                <category android:name="com.zachcotter.bananagrams"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <permission
+        android:name="edu.neu.madcourse.zachcotter.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="edu.neu.madcourse.zachcotter.permission.C2D_MESSAGE"/>
+</manifest>
