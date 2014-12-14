@@ -28,13 +28,13 @@
             android:layout_weight=".5"/>
     </LinearLayout>
 
-    <edu.neu.madcourse.zachcotter.bananagrams.Board
+    <com.zachcotter.bananagrams.Board
         android:id="@+id/board"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="0.77"/>
 
-    <edu.neu.madcourse.zachcotter.bananagrams.LetterList
+    <com.zachcotter.bananagrams.LetterList
         android:id="@+id/letters_view"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -46,5 +46,5 @@
             android:layout_height="fill_parent"
             android:text="@string/peel_button_label"
             android:visibility="gone"/>
-    </edu.neu.madcourse.zachcotter.bananagrams.LetterList>
+    </com.zachcotter.bananagrams.LetterList>
 </LinearLayout>

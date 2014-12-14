@@ -1,7 +1,6 @@
 package com.zachcotter.bananagrams;
 
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,15 +22,7 @@ public class BananagramsMenu extends Activity implements OnClickListener {
     gameOverView = (TextView) findViewById(R.id.game_over_view);
 
     findViewById(R.id.new_bananagrams_button).setOnClickListener(this);
-    findViewById(R.id.bananagrams_menu_quit).setOnClickListener(this);
-    findViewById(R.id.bananagrams_menu_settings_button).setOnClickListener(this);
-    findViewById(R.id.bananagrams_acknowledgements_button).setOnClickListener(this);
     findViewById(R.id.multiplayer_button).setOnClickListener(this);
-
-    if (android.os.Build.VERSION.SDK_INT > 10){
-      ActionBar actionBar = getActionBar();
-      actionBar.setDisplayHomeAsUpEnabled(true);
-    }
   }
 
   @Override
@@ -41,11 +32,6 @@ public class BananagramsMenu extends Activity implements OnClickListener {
         startActivityForResult(new Intent(this,
                                           SinglePlayerBananagrams.class),
                                GAME_OVER_REQUEST_CODE);
-        return;
-      case R.id.bananagrams_menu_settings_button:
-        startActivityForResult(new Intent(this,
-                                          Settings.class),
-                               1);
         return;
       case R.id.multiplayer_button:
         Intent intent = new Intent(this,

@@ -14,7 +14,6 @@ public class BananagramsPauseMenu extends Activity implements OnClickListener {
 
     findViewById(R.id.resume_bananagrams_button).setOnClickListener(this);
     findViewById(R.id.bananagrams_pause_quit).setOnClickListener(this);
-    findViewById(R.id.bananagrams_pause_settings_button).setOnClickListener(this);
   }
 
 
@@ -33,10 +32,6 @@ public class BananagramsPauseMenu extends Activity implements OnClickListener {
         setResult(RESULT_OK, null);
         finish();
         break;
-      case R.id.bananagrams_pause_settings_button:
-        startActivityForResult(new Intent(this,
-                                          Settings.class),
-                               1);
     }
   }
 }

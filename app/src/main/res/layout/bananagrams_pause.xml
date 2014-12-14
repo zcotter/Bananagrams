@@ -14,10 +14,5 @@
         android:layout_height="wrap_content"
         android:text="@string/quit_game_label"
         android:id="@+id/bananagrams_pause_quit"/>
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/bananagrams_settings_label"
-        android:id="@+id/bananagrams_pause_settings_button"/>
 
 </LinearLayout>
