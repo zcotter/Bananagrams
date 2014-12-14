@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import com.google.android.gcm.GCMRegistrar;
+
 public class BananagramsMenu extends Activity implements OnClickListener {
 
   private static final int GAME_OVER_REQUEST_CODE = 1;
@@ -18,7 +20,10 @@ public class BananagramsMenu extends Activity implements OnClickListener {
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.bananagrams_menu);
-
+    GCMRegistrar.checkDevice(this);
+    GCMRegistrar.checkManifest(this);
+    GCMRegistrar.register(this,
+                          Network.GCM_SENDER_ID);
     gameOverView = (TextView) findViewById(R.id.game_over_view);
 
     findViewById(R.id.new_bananagrams_button).setOnClickListener(this);

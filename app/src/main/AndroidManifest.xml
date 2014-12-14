@@ -29,9 +29,6 @@
         <activity
             android:name=".BananagramsPauseMenu"
             android:label="@string/word_game_label"/>
-        <activity
-            android:name=".Settings"
-            android:label="@string/bananagrams_settings_label"/>
         <activity android:name=".Communication"/>
         <activity
             android:name=".HighScoreTable"
@@ -70,7 +67,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <permission
-        android:name="edu.neu.madcourse.zachcotter.permission.C2D_MESSAGE"
+        android:name="com.zachcotter.bananagrams.permission.C2D_MESSAGE"
         android:protectionLevel="signature"/>
-    <uses-permission android:name="edu.neu.madcourse.zachcotter.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.zachcotter.bananagrams.permission.C2D_MESSAGE"/>
 </manifest>

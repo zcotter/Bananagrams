@@ -11,6 +11,7 @@ import android.content.SharedPreferences.Editor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.util.Patterns;
 
 import com.google.android.gcm.GCMRegistrar;
@@ -43,7 +44,7 @@ import java.util.regex.Pattern;
 public class Network {
   public static final String GCM_SENDER_ID = "129745199203";
   static final int TIMEOUT = 10000;
-  static final String APPLICATION_SERVER_URL = "http://www.zachcotter.com/";
+  static final String APPLICATION_SERVER_URL = "http://www.zachcotter.com:82/";
   static final String CREATE_PLAYER_ROUTE = "bananagrams_players.json";
   public static final String BANAGRAMS_SERVER_PREFS = "BananagramsServerPrefs";
   static final String PLAYER_ID_KEY = "PlayerId";
@@ -76,6 +77,7 @@ public class Network {
     post.setEntity(se);
     HttpResponse response = client.execute(post);
     String responseString = EntityUtils.toString(response.getEntity());
+    Log.w("response", responseString);
     JSONObject record = new JSONObject(responseString);
     return record.get(returnField);
 
