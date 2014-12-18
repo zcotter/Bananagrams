@@ -11,12 +11,18 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="New Single Player Game"
+        android:text="Play By Yourself"
         android:id="@+id/new_bananagrams_button"/>
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/multiplayer_text"
+        android:text="Play With A Friend"
         android:id="@+id/multiplayer_button"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_high_scores_button"
+        android:text="@string/view_high_scores_text"/>
 </LinearLayout>

@@ -22,7 +22,7 @@ public class HighScoreTable extends Activity {
                                       -1);
 
     WebView webView = (WebView) findViewById(R.id.high_score_table);
-    String url = "http://www.zachcotter.com/bananagrams_scores";
+    String url = "http://www.zachcotter.com:82/bananagrams_scores";
     if(playerID != -1){
       url += "?current_player_id=" + playerID;
     }
@@ -36,7 +36,7 @@ public class HighScoreTable extends Activity {
 
   public boolean onOptionsItemSelected(MenuItem item) {
     Intent i = new Intent(this,
-                          Communication.class);
+                          BananagramsMenu.class);
     startActivity(i);
     finish();
     return true;

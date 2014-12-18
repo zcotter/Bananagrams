@@ -28,6 +28,7 @@ public class BananagramsMenu extends Activity implements OnClickListener {
 
     findViewById(R.id.new_bananagrams_button).setOnClickListener(this);
     findViewById(R.id.multiplayer_button).setOnClickListener(this);
+    findViewById(R.id.view_high_scores_button).setOnClickListener(this);
   }
 
   @Override
@@ -46,6 +47,12 @@ public class BananagramsMenu extends Activity implements OnClickListener {
         startActivityForResult(intent,
                                GAME_ID_REQUEST_CODE);
 
+        return;
+      case R.id.view_high_scores_button:
+        Intent i = new Intent(this,
+                              HighScoreTable.class);
+        startActivity(i);
+        finish();
         return;
     }
   }
